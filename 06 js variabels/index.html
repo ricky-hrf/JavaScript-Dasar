@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variabel JavaScript</title>
+</head>
+<body>
+  <h2>variabel dalam js dapat dideklarasikan dalam 4 cara</h2>
+  <h3>Automatically</h3>
+  <p id="demo"></p>
+  <h3>Menggunakan var</h3>
+  <p id="demo1"></p>
+  <h3>Menggunakan Let</h3>
+  <p id="demo2"></p>
+  <h3>Menggunakan const</h3>
+  <p id="demo3"></p>
+  <script>
+    x=5, y=3, z=x+y;
+    document.getElementById("demo").innerHTML = "Nilai z =" + z;
+    //menggunakan var
+    var a = 3;
+    var b = 7;
+    var c = a + b;
+    document.getElementById("demo1").innerHTML = "Nilai c = " + c;
+    //menggunakan let
+    let e = 4;
+    let f = 9;
+    let g = e + f;
+    document.getElementById("demo2").innerHTML = "Nilai g= " + g;
+    //menggunakan const
+    const j = 5;
+    const k = 6;
+    const l = j + k;
+    document.getElementById("demo3").innerHTML = " Nilai l = "+l;
+  </script>
+</body>
+</html>
