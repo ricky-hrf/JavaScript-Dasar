@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>assigment operators</title>
+</head>
+<body>
+  <h3>jenis-jenis assigment Operator</h3>
+  <ul>
+    <li>Simple Assignment Operator (=)</li>
+    <p id="demo"></p>
+    <li>Bitwise AND Assignment Operator</li>
+    <p id="demo11"></p>
+    <li>Bitwise OR Assignment Operator (|=)</li>
+    <p id="demo12"></p>
+    <li>Bitwise XOR Assignment Operator (^=)</li>
+    <p id="demo13"></p>
+    <li>Logical AND assignment operator (&&=)</li>
+    <p id="demo14"></p>
+    <li>Logical OR assignment operator (||=)</li>
+    <p id="demo15"></p>
+    <li>Nullish coalescing assignment operator (??=)</li>
+    <p id="demo16"></p>
+  </ul>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  
+  <script>
+    // operator = 
+    let y = 50;
+    let x = 10 + y;
+    document.getElementById("demo").innerHTML = "x = "+x;
+    //operator += (Addition Assignment Operator)
+    let q = 45;
+    q +=5;
+    document.getElementById("demo1").innerHTML = "q = "+q;
+    let text = "Ricky";
+    text += " Harefa";
+    document.getElementById("demo2").innerHTML = text;
+    //operator -= (Subtraction Assignment Operator)
+    let a = 10;
+    a -= 3;
+    document.getElementById("demo3").innerHTML = "a = "+a;
+    //operator *= (Multiplication Assignment Operator)
+    let b = 12;
+    b *= 2;
+    document.getElementById("demo4").innerHTML = "b *= 2 = "+b;
+    //operator **= (Exponentiation Assignment Operator)
+    let c = 5;
+    c **=3;
+    document.getElementById("demo5").innerHTML = "c = "+c;
+    //operator /= (Division Assignment Operator)
+    let d = 160;
+    d /= 4;
+    document.getElementById("demo6").innerHTML = "d = "+d;
+    //Remainder Assignment Operator (%=)
+    let v = 10;
+    v %=5;
+    document.getElementById("demo7").innerHTML = "v = "+v;
+    //Left Shift Assignment Operator (<<=)
+    let e = -100;
+    e <<= 5;
+    document.getElementById("demo8").innerHTML = "e = "+e;
+    //Right Shift Assignment Operator (>>=)
+    let f = -100;
+    f >>= 5;
+    document.getElementById("demo9").innerHTML = "f = " + f;
+    //Unsigned Right Shift Assignment Operator (>>>=)
+    let g = -100;
+    g >>>= 5;
+    document.getElementById("demo10").innerHTML = "g = " + g;
+    //Bitwise AND Assignment Operator (&=)
+    let h = 10;
+    h &= 5;
+    document.getElementById("demo11").innerHTML = "h = " + h;
+    //Bitwise OR Assignment Operator (|=)
+    let i = 10;
+    i |= 5;
+    document.getElementById("demo12").innerHTML = "i = " + i;
+    //Bitwise XOR Assignment Operator (^=)
+    let j = 10;
+    j ^= 5;
+    document.getElementById("demo13").innerHTML = "j = " + j;
+    //Logical AND assignment operator (&&=)
+    let k = 10;
+    k &&= 5;
+    document.getElementById("demo14").innerHTML = "k = " + k;
+    //Logical OR assignment operator (||=)
+    let l = 10;
+    l ||= 5;
+    doocument.getElementById("demo15").innerHTML = "l = " + l;
+    //Nullish coalescing assignment operator (??=)
+    let m;
+    m ??= 5;
+    document.getElementById("demo16").innerHTML = "m = " + m;
+  </script>
+</body>
+</html>
