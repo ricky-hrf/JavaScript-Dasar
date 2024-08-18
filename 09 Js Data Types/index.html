@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tipe Data</title>
+</head>
+<body>
+  <h2>Tipe Data</h2>
+  <ul>
+    <li>String</li>
+    <p id="demo"></p>
+    <li>Number</li>
+    <p id="demo1"></p>
+    <li>Notasi Eksponen</li>
+    <p id="demo2"></p>
+    <li>booleans</li>
+    <p id="demo3"></p>
+    <li>Array</li>
+    <p id="demo4"></p>
+    <li>objek</li>
+    <p id="demo5"></p>
+  </ul>
+  <script>
+    // tipe data string
+    let string1 = "It's all right";
+    let string2 = "mari belajar 'JavaScript'";
+    let string3 = "saya senang belajar 'JavaScript'";
+    document.getElementById("demo"). innerHTML = string1 + "<br>" + string2 + "<br>" + string3;
+    //tipe data number
+    let x1 = 34.00;
+    let x2 = 34;
+    let x3 = 3.14;
+    document.getElementById("demo1").innerHTML = x1 + "<br>" + x2 + "<br>" + x3;
+    //Exponential Notation
+    let y1 = 123e5; //12300000
+    let y2 = 123e-5; //0,00123
+    document.getElementById("demo2").innerHTML = y1 + "<br>" + y2;
+    // tipe data boolean
+    let a = 5;
+    let b = 5;
+    let c = 6;
+    document.getElementById("demo3").innerHTML = (a == b) + "<br>" + (a == c);
+    // tipe data arrya
+    const bike = ["Honda", "Suzuki", "Yamaha"];
+    document.getElementById("demo4").innerHTML = bike;
+    //objek
+    const buku = {
+      judul : "Belajar JavaScript ",
+      halaman : "112",
+      tahun : "2024",
+    };
+    document.getElementById("demo5").innerHTML = buku.judul + "jumlah halaman" + buku.halaman;
+
+  </script>
+</body>
+</html>
