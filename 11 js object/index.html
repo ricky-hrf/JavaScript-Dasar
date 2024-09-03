@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object JavaScript</title>
+</head>
+<body>
+  <h1>Belajar Object dalam JavaScript</h1>
+  <button onclick="showName()">Tampilkan Nama</button>
+  <p id="output"></p>
+
+  <h2>Studi Kasus E-commerce</h2>
+  <h3>Produk Diskon</h3>
+  <p>Harga Barang = Rp 5700000</p>
+  <button onclick="showHargaDiskon()">Harga Diskon 10 % </button>
+  <p id="tampilkan"></p>
+  <br>
+
+  <!-- studi kasus manajemen data karyawan -->
+  <h2>Studi Kasus Data Karyawan</h2>
+  <h3>Bonus Karyawan</h3>
+  <button onclick="totalgaji()">Hitung Gaji + Bonus Karyawan</button>
+  <p id="gajipokok"></p>
+  <p id="gajitambahbonus"></p>
+  <br>
+
+  <!-- Sistem Manajemen Perpustakaan -->
+  <h2>Studi Kasus Manajemen Perpustakaan</h2>
+  <h3>Peminjaman Buku</h3>
+  <button onclick="borrowBook()">Pinjam Buku</button>
+  <p id="pinjambuku"></p>
+  <br>
+
+  <!-- studi kasus sistem reservasi tiket -->
+  <h2>Reservasi Tiket</h2>
+  <button onclick="hitungHarga()">Harga Tiket</button>
+  <p id="tiket"></p>
+
+  <script>
+    //membuat objek orang
+    let orang = {
+      nama : "Ricky",
+      umur : 22
+    };
+    //membuat fungsi untuk memanggil nilai dalam objek
+    function showName(){
+      let outputElement = document.getElementById("output");
+      outputElement.textContent = "Nama: " + orang.nama;
+    };
+    
+    //studi kasus e-commerce
+    let produk = {
+      name : "Laptop",
+      harga : 5700000,
+      kategori : "Elektronik",
+      gunakandiskon : function(discount){
+        return this.harga - (this.harga * discount / 100);
+      }
+    };
+    function showHargaDiskon(){
+      let tampilkan = document.getElementById("tampilkan");
+      tampilkan.textContent = "Harga barang setelah diskon 10%: Rp " + produk.gunakandiskon(10).toLocaleString('id-ID');
+    };
+
+    //studi kasus manajemen karyawan
+    let karyawan = {
+      namakaryawan : "Ricky",
+      posisi : "Manager Divisi IT",
+      gaji : 12000000,
+      skorPerforma : 95,
+      HitungBonus : function(){
+        if (this.skorPerforma > 80 ){
+          return this.gaji * 0.10; //10% dari gaji pokok
+        } else{
+          return 0;
+        }
+      },
+      HitungTotalGaji: function(){
+        return this.gaji + this.HitungBonus();
+      }
+    };
+    function totalgaji(){
+      document.getElementById("gajipokok").textContent = "Gaji Pokok = RP " + karyawan.gaji.toLocaleString('id-ID');
+      document.getElementById("gajitambahbonus").textContent = "Gaji Pokok + Bonus = RP" + karyawan.HitungTotalGaji().toLocaleString('id-ID');
+    };
+
+    //studi kasus manajemen perpustakaan
+    let buku = {
+      judul : "Belajar JavaScript",
+      author : "Ricky Harefa",
+      isbn : "1234567890",
+      isAvailable : true,
+      borrowBook : function() {
+        if (this.isAvailable) {
+          this.isAvailable = false;
+          return "Buku berhasil dipinjam";
+        }else{
+          return "buku sedang tidak tersedia";
+        }
+      },
+      returnBook: function(){
+        this.isAvailable = true;
+        return "Buku telah dikembalikan";
+      }
+    };
+    function borrowBook() {
+      let pinjambuku = document.getElementById("pinjambuku");
+      pinjambuku.textContent = buku.borrowBook();
+    }
+
+    //studi kasus sistem reservasi tiket
+    let reservation = {
+      NamaPenumpang : "Ricky Harefa",
+      destinasi : "Nias Utara",
+      tickets : 2,
+      hargaTiket : 750000,
+      hitungTotalHarga : function(){
+        return this.tickets * this.hargaTiket;
+      }
+    };
+    function hitungHarga(){
+      let tiket = document.getElementById("tiket");
+      tiket.textContent = "Total Harga: Rp " + reservation.hitungTotalHarga();
+    };
+  </script>
+</body>
+</html>
