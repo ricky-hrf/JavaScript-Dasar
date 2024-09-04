@@ -6,6 +6,33 @@
   <title>Belajar Strings</title>
 </head>
 <body>
-  
+  <h1>Metode dan properti string</h1>
+  <ul>
+    <li>length : mengembalikan panjang string</li>
+    <li>toUpperCase()/toLowerCase() : mengubah huruf besar/kecil</li>
+    <li>slice(start,end): mengambil bagian dari string berdasarkan index</li>
+    <li>replace(find,replace): mengganti sebagian string dengan string lain</li>
+    <li>split(separator): memecah string menjadi array berdasarkan pemisah tertentu</li>
+  </ul>
+  <br>
+  <h2>Membalik string dengan javascript</h2>
+  <!-- input memasukkan string -->
+  <label for="inputString">Input String: </label>
+  <input type="text" id="inputString"/>
+
+  <!-- tombol membalik string -->
+  <button onclick="reverseString()">Balikkan String</button>
+  <p>string yang dibalik: <span id="reversedString"></span></p>
+
+  <script>
+    function reverseString(){
+      //mengambil nilai dari input
+      let str = document.getElementById('inputString').value;
+      //membalik string
+      let reversed = str.split('').reverse().join('');
+      //menampilkan hasil
+      document.getElementById('reversedString').innerHTML = reversed;
+    }
+  </script>
 </body>
 </html>
