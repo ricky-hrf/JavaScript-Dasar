@@ -58,5 +58,11 @@
   buah.splice(2,0, "Lemon", "Kiwi");
   document.getElementById("splice").innerHTML = "Hasil array methods menggunakan splice() : " + buah;
 
-  //array tosplice()
-  
+  //array tospliced()
+  const bulan = ["Jan", "Feb", "Mar", "Apr", "Mei"];
+  const spliced = [bulan.toSpliced(0, 1)];
+  document.getElementById("tospliced").innerHTML = "Hasil array methods menggunakan tospliced() : " + spliced;
+
+  //array slice()
+  const newBulan = bulan.slice(1,3);
+  document.getElementById("slice").innerHTML = "Hasil array methods menggunakan slice() : " + newBulan;
