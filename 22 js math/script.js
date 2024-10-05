@@ -1,0 +1,14 @@
+document.getElementById("demo1").innerHTML = Math.round(4.6);
+document.getElementById("demo2").innerHTML = Math.ceil(4.4);
+document.getElementById("demo3").innerHTML = Math.floor(4.7);
+document.getElementById("demo4").innerHTML = Math.trunc(4.6);
+document.getElementById("demo5").innerHTML = Math.sign(4.6);
+document.getElementById("demo6").innerHTML = Math.sign(-8);
+document.getElementById("demo7").innerHTML = Math.pow(8,2);
+document.getElementById("demo8").innerHTML = Math.sqrt(25);
+document.getElementById("demo9").innerHTML = Math.abs(-4.7);
+document.getElementById("demo10").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+document.getElementById("demo11").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+document.getElementById("demo12").innerHTML = Math.log(1);
+document.getElementById("demo13").innerHTML = Math.log2(8);
+document.getElementById("demo14").innerHTML = Math.log10(1000);
