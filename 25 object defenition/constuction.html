@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object Constructor Functions</title>
+</head>
+<body>
+  <h1>JavaScript Object Constuctors</h1>
+  <span id="demo"></span>
+
+  <script>
+    function Person(first, last, age, eye){
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+
+    //membuat dua objek orang
+    const MyFather = new Person("Joh", "Doe", "50", "Blue");
+    const MyMother = new Person("Sally", "Rally", "48", "Green");
+
+    //tampilkan umur
+    document.getElementById("demo").innerHTML = "My father is " + MyFather.age + ". My Mother is " + MyMother.age + ".";
+  </script>
+</body>
+</html>
