@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methode Object</title>
+</head>
+<body>
+  <h2>The Object.assign() Method</h2>
+  <p id="demos"></p>
+  <script>
+    //create terget object
+    const person1 = {
+      firstName : "John",
+      lastName : "Doe",
+      age: 50,
+      eyeColor: "Blue"
+    };
+    //create source object
+    const person2 = {firstName: "Anne", lastName: "Smith"};
+
+    //assign source to target
+    Object.assign(person1, person2);
+
+    //display target
+    let text = Object.entries(person1);
+    document.getElementById("demos").innerHTML = text;
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan Method Object</title>
+</head>
+<body>
+  <p>Method dalam object merupakan sebuah fungsi yang berjalan di dalam object</p>
+  <span>misalkan saya mempunyai mobil. Mobil merupakan sebuah object. Untuk menjalankan mobil itu saya memerlukan cara. Cara inilah yang disebut sebagai metode. Dalam object javascript juga sama, di dalamnya terdapat fungsi yang dinamakan method untuk menjalankan object tersebut.</span>
+  <span>cara penulisannya seperti apa?</span>
+  <script>
+    const Mobil = {
+      merek: "TOYOTA",
+      nyalakanMesin: function(){
+        console.log("Mesin dinyalakan...");
+      }
+    };
+    Mobil.nyalakanMesin();
+  </script>
+</body>
+</html>
