@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Object</title>
+</head>
+<body>
+  <h1>menambahkan properti ke dalam sebuah object</h1>
+  <p id="demo"></p>
+  <script>
+    //buatkan object
+    const person = {
+      firstName : "John",
+      lastName: "Doe",
+      language: "Ind"
+    };
+
+    //tambahkan properti baru
+    Object.defineProperty(person, "year", {value:"2008"})
+
+    //tampilkan properti
+    document.getElementById("demo").innerHTML = person.year;
+  </script>
+</body>
+</html>
