@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Belajar Function</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+    <h1 class="text-2xl font-bold mb-4">Daftar Menu</h1>
+    <div id="menu" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+    <h2 class="text-xl font-bold mt-6">Pesanan Anda</h2>
+    <ul id="orderedList" class="mt-2"></ul>
+    <p class="font-bold mt-4">Total: Rp <span id="totalPrice">0</span></p>
+    <button id="payButton" class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Bayar</button>
+  </div>
+
+  <script>
+    const menu = [
+      {id: 1, name: "Nasi Goreng", price:25000},
+      {id: 2, name: "Mie Ayam", price:20000},
+      {id: 3, name: "Sate Ayam", price:30000}
+    ];
+
+    const menuContainer = document.getElementById("menu");
+    const orderList = document.getElementById("orderedList");
+    const totalPriceElement = document.getElementById("totalPrice");
+    const payButton = document.getElementById("payButton");
+    let orders = [];
+
+    function renderMenu(){
+      menuContainer.innerHTML = "";
+      menu.forEach(item => {
+        const menuItem = document.createElement("div");
+        menuItem.classList.add("bg-gray-200", "p-4", "rounded-lg", "text-center");
+        menuItem.innerHTML = `<p>${item.name} - Rp ${item.price}</p>
+          <button class='bg-green-500 text-white px-2 py-1 rounded mt-2' onclick='addToOrder(${item.id})'>Tambah</button>`;
+        menuContainer.appendChild(menuItem);
+      });
+    }
+    function addToOrder(id) {
+        const item = menu.find(menuItem => menuItem.id === id);
+        orders.push(item);
+        updateOrder();
+      }
+
+      function updateOrder() {
+        orderList.innerHTML = "";
+        let total = 0;
+        orders.forEach((order, index) => {
+          total += order.price;
+          const orderItem = document.createElement("li");
+          orderItem.innerHTML = `${order.name} - Rp ${order.price} <button onclick='removeOrder(${index})' class='ml-2 text-red-500'>Hapus</button>`;
+          orderList.appendChild(orderItem);
+        });
+        totalPriceElement.innerText = total;
+      }
+
+      function removeOrder(index) {
+        orders.splice(index, 1);
+        updateOrder();
+      }
+
+      payButton.addEventListener("click", function () {
+        if (orders.length === 0) {
+          alert("Pesanan kosong!");
+          return;
+        }
+        alert(`Pembayaran sebesar Rp ${totalPriceElement.innerText} berhasil!`);
+        orders = [];
+        updateOrder();
+      });
+
+      renderMenu();
+  </script>
+</body>
+</html>
