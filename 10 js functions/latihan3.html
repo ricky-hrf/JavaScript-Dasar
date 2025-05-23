@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 3</title>
+</head>
+<body>
+  <h1>latiahan 3</h1>
+  <script>
+    function operasi(){
+      const bil1= parseInt(prompt("Masukkan bilangan 1"));
+      const bil2= parseInt(prompt("Masukkan bilangan 2"));
+      const oper= prompt("Masukkan operasi: +, -, *, /...");
+      let hasil;
+      if(oper === "+"){
+        hasil = bil1 + bil2;
+      }else if(oper === "-"){
+        hasil = bil1 - bil2;
+      }else if(oper === "*"){
+        hasil = bil1 * bil2;
+      }else if(oper === "/"){
+        if(bil2 !== 0){
+          hasil = bil1 / bil2;
+        }else{
+          alert("Tidak bisa pembagian dengan 0");
+        }
+      }else{
+        alert("Operasi tidak valid");
+        return;
+      }
+      alert(`hasil : ${bil1} ${oper} ${bil2} = ${hasil}`);
+    }
+    operasi();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 5</title>
+</head>
+<body>
+  <script>
+    function cekUsia() {
+        let umur = parseInt(prompt("Berapa umur kamu?"));
+
+        if (umur < 17) {
+          alert("Maaf, kamu belum cukup umur.");
+        } else {
+          alert("Selamat datang! Silakan masuk.");
+          return cekUsia;
+        }
+      }
+
+      cekUsia();
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 4</title>
+</head>
+<body>
+  <script>
+    function login() {
+        let usernameBenar = "admin";
+        let passwordBenar = "1234";
+        let berhasil = false;
+
+        while (!berhasil) {
+          let user = prompt("Masukkan username:");
+          let pass = prompt("Masukkan password:");
+
+          if (user === usernameBenar && pass === passwordBenar) {
+            alert("Login berhasil! Selamat datang.");
+            berhasil = true;
+          } else {
+            alert("Username atau password salah. Coba lagi.");
+          }
+        }
+      }
+
+      login();
+  </script>
+</body>
+</html>

@@ -38,3 +38,9 @@ while (angka <= 5) {
   }
   angka++;
 }
+console.log('======Membuat menunggu inputan sampai benar======');
+let password = "";
+while (password !== "123") {
+  password = prompt("password salah: ");
+}
+alert("akses berhasil")

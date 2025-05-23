@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 7</title>
+</head>
+<body>
+  <script>
+    function kuisSederhana() {
+        let jawaban;
+        let benar = "javascript";
+
+        while (jawaban !== benar) {
+          jawaban = prompt("Apa bahasa pemrograman yang sedang kamu pelajari?");
+
+          if (jawaban.toLowerCase() !== benar) {
+            alert("Jawaban salah, coba lagi!");
+          } else {
+            alert("Benar! Kamu hebat");
+          }
+        }
+      }
+
+      kuisSederhana();
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 1</title>
+</head>
+<body>
+  <h1>latihan 1</h1>
+  <script>
+    function tambah(a,b){
+      return a+b;
+    }
+    let latiahan1= tambah(8, 6)
+    console.log(latiahan1);
+
+    // function expression
+    const sapa = function(nama) {
+      return `Hallo, ${nama}!`;
+    }
+    console.log(sapa("Ayu"));
+    console.log("studi kasus cek bilangan ganjil genap");
+    function ganjilGenap(bilangan){
+      if(bilangan % 2 === 0){
+        return "Genap";
+      }else{
+        return "Ganjil";
+      }
+    }
+    console.log(ganjilGenap(5));
+    console.log(ganjilGenap(7));
+    function undang(orang){
+      console.log(`Ayo makan ${orang}!`);
+    }
+    undang("Budi");
+
+    function pertambahan( x, y){
+      console.log(x+y);
+    }
+    pertambahan(5, 3)
+  </script>
+</body>
+</html>
