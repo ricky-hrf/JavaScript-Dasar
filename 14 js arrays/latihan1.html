@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan array</title>
+</head>
+<body>
+  <script>
+    // manipulasi array
+    let hari = ["Senin", "Selasa", "Rabu", "Kamis"]
+    hari.push("Jumat");
+    hari.pop();
+    hari.splice(1,0,"Jumat")
+    for(let i=0; i<hari.length;i++){
+      console.log(hari[i]);
+    }
+    // foreach
+    let angka = [1,2,3,9,5,6,7]
+    angka.sort()
+    angka.forEach(function(bil) {
+      console.log(bil)
+    });
+    // filter, mencari nilai array mengembalikan dalam bentuk array
+    let angka2=angka.filter(function(a){
+      return a == 3;
+    });
+    console.log(angka2.join())
+  </script>
+</body>
+</html>
