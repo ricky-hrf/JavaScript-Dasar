@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 2</title>
+</head>
+<body>
+  <p id="judul">Ini Judul Lama</p>
+  
+  <p class="highlight">Teks 1</p>
+  <p class="highlight">Teks 2</p>
+
+  <div class="kotak">Kotak 1</div>
+  <div class="kotak">Kotak 2</div>
+
+  <ul>
+    <li>Item A</li>
+    <li>Item B</li>
+    <li>Item C</li>
+    </ul>
+
+    <p class="rahasia">Ini akan disembunyikan</p>
+    <p>Ini tetap terlihat</p>
+
+  <script>
+    // mengubah teks elemen
+    const judul = document.querySelector('#judul');
+    judul.textContent = "Judul Baru dari JavaScript";
+    
+    // mengganti warna elemen pertama
+    const pertama = document.querySelector('.highlight');
+    pertama.style.color = "red";
+
+    // menambahkan border
+    const kotak = document.querySelector('.kotak');
+    kotak.style.border = "2px solid blue";
+
+    // mengubah semua elemen dengan tag
+    const semuaItem = document.querySelectorAll('li');
+      semuaItem.forEach((item, index) => {
+        item.textContent = `Item ke-${index + 1}`;
+      });
+
+    // menyembunyikan elemen tertentu
+    const elemen = document.querySelector('.rahasia');
+      elemen.style.display = "none";
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan 2</title>
+</head>
+<body>
+  <script>
+  // Buatlah array bernama buah yang berisi 5 nama buah, kemudian:
+
+  // Tampilkan buah pertama
+
+  // Tampilkan buah terakhir
+
+  // Tampilkan panjang array
+
+//   2. Modifikasi Array
+// Diberikan array angka = [1, 2, 3, 4, 5], lakukan:
+
+// Tambah angka 6 di akhir
+
+// Hapus angka pertama
+
+// Tambah angka 0 di awal
+
+//     javascript
+//     let angka = [1, 2, 3, 4, 5];
+
+//     // Tulis kode Anda di sini
+
+//     console.log(angka); // Output yang diharapkan: [0, 2, 3, 4, 5, 6]
+//   3. Metode Array
+  //     let nilai = [80, 65, 90, 75, 85];
+  //     // Hitung rata - rata nilai
+  //     let rataRata = nilai.reduce((a, b) => a + b, 0) / nilai.length;
+  //     // Cari nilai tertinggi
+  //     let max = Math.max(...nilai);
+  //     // Cari nilai terendah
+  //     let min = Math.min(...nilai);
+
+  // console.log(`Rata-rata: ${rataRata}`); // 79
+  // console.log(`Nilai tertinggi: ${max}`); // 90
+  // console.log(`Nilai terendah: ${min}`); // 65
+  const mahasiswa = [
+      { nama: "Ayu", nim: "202301", jurusan: "Informatika" },
+      { nama: "Budi", nim: "202302", jurusan: "Sistem Informasi" },
+      { nama: "Citra", nim: "202303", jurusan: "Teknik Komputer" }
+    ];
+
+    mahasiswa.forEach(m => {
+      console.log(m.nama);
+    });
+  </script>
+</body>
+</html>
