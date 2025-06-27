@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting</title>
+</head>
+<body>
+  <script>
+    let pilihan = 2;
+
+      switch (pilihan) {
+        case 1:
+          console.log("Kamu memilih: Ahmad - Visi: OSIS aktif dan inovatif");
+          break;
+        case 2:
+          console.log("Kamu memilih: Bella - Visi: Sekolah kreatif dan modern");
+          break;
+        case 3:
+          console.log("Kamu memilih: Chandra - Visi: Disiplin dan berprestasi");
+          break;
+        default:
+          console.log("Pilihan tidak valid. Silakan pilih antara 1 - 3.");
+      }
+    // Tambahkan logika untuk menangani hasil voting
+    // Misalnya, menyimpan hasil ke dalam array atau objek untuk analisis lebih lanjut
+    // Contoh sederhana:
+    let hasilVoting = {
+      Ahmad: 0,
+      Bella: 0,
+      Chandra: 0
+    };
+    // Simulasi hasil voting
+    hasilVoting.Ahmad += (pilihan === 1) ? 1 : 0;
+    hasilVoting.Bella += (pilihan === 2) ? 1 : 0;
+    hasilVoting.Chandra += (pilihan === 3) ? 1 : 0;
+    console.log("Hasil Voting:", hasilVoting);
+  </script>
+</body>
+</html>

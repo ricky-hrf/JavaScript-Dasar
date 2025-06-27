@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan switch</title>
+</head>
+<body>
+  <script>
+    let hari = 3;
+    let namaHari;
+      switch (hari) {
+        case 1:
+          namaHari = "Senin";
+          break;
+        case 2:
+          namaHari = "Selasa";
+          break;
+        case 3:
+          namaHari = "Rabu";
+          break;
+        case 4:
+          namaHari = "Kamis";
+          break;
+        default:
+          namaHari = "Hari tidak diketahui";
+      }
+
+      console.log(namaHari); // Output: Rabu
+
+      let operator = '*';
+        let angka1 = 5;
+        let angka2 = 3;
+        let hasil;
+
+        switch (operator) {
+          case '+':
+            hasil = angka1 + angka2;
+            break;
+          case '-':
+            hasil = angka1 - angka2;
+            break;
+          case '*':
+            hasil = angka1 * angka2;
+            break;
+          case '/':
+            hasil = angka1 / angka2;
+            break;
+          default:
+            hasil = "Operator tidak dikenali";
+        }
+
+        console.log("Hasil: " + hasil); // Output: Hasil: 15
+      let nilai = 85;
+      let grade;
+      switch (true) {
+        case (nilai >= 90):
+          grade = "A";
+          break;
+        case (nilai >= 80):
+          grade = "B";
+          break;
+        case (nilai >= 70):
+          grade = "C";
+          break;
+        case (nilai >= 60):
+          grade = "D";
+          break;
+        default:
+          grade = "E";
+      }
+  </script>
+</body>
+</html>
