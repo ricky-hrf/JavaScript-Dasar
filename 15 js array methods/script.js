@@ -66,3 +66,17 @@
   //array slice()
   const newBulan = bulan.slice(1,3);
   document.getElementById("slice").innerHTML = "Hasil array methods menggunakan slice() : " + newBulan;
+
+//trim(), menghapus spasi di awal dan akhir string
+  const str = "   Hello World!   ";
+  const trimmedStr = str.trim();
+document.getElementById("trim").innerHTML = "Hasil trim() : '" + trimmedStr + "'";
+  
+// filter(), membuat array baru dengan elemen yang memenuhi kondisi tertentu
+  const angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const angkaGenap = angka.filter(num => num % 2 === 0);
+document.getElementById("filter").innerHTML = "Hasil filter() : " + angkaGenap;
+
+// map(), membuat array baru dengan hasil dari fungsi yang diterapkan pada setiap elemen
+const angkaKuadrat = angka.map(num => num * num);
+document.getElementById("map").innerHTML = "Hasil map() : " + angkaKuadrat;

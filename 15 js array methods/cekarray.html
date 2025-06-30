@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // menggunakan prompt untuk cek apakah angka yang ditebak ada di dalam array
+    
+    const input = prompt("Masukkan angka:");
+    const array = [1, 2, 3, 4, 5];
+    if (input && input.trim() !== "") {
+      const numbers = input.split(',').map(Number);
+      const foundNumbers = numbers.filter(num => array.includes(num));
+      
+      if (foundNumbers.length > 0) {
+        alert(`${input} ditemukan dalam array`);
+      } else {
+        alert(`${input} tidak ditemukan dalam array`);
+      }
+    } else {
+      alert("Input tidak valid.");
+    }
+  </script>
+</body>
+</html>
+</html>
