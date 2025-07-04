@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>latihan membuat objek</title>
+</head>
+<body>
+  <script>
+    // literal
+    let mahasiswa = {
+      nama: "Lily",
+      nrp : 12345678,
+      email : "lily@gmail.com",
+      jurusan : "agroteknologi"
+    }
+
+    // function declaration
+    function objek_mahasiswa(nama, nrp, email, jurusan){
+      let mhs = {}
+      mhs.nama = nama;
+      mhs.nrp = nrp;
+      mhs.email = email;
+      mhs.jurusan = jurusan;
+      return mhs;
+    }
+
+    let mahasiswa1 = objek_mahasiswa("Lilly", 242025, "kesayangan@gmail.com", "agroteknologi")
+
+    // constuctor
+    function Kesayangan(nama,status){
+      this.nama = nama;
+      this.status = status;
+    }
+
+    let Dia = new Kesayangan("Lilly", "Single")
+    console.log(Dia)
+  </script>
+</body>
+</html>
