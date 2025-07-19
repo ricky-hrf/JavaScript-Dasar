@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contoh Class & Inheritance</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
 
-    .output {
-      background: #f0f0f0;
-      padding: 20px;
-      margin-top: 20px;
-      border-radius: 5px;
-    }
-
-    .output p {
-      margin: 5px 0;
-      padding: 3px;
-      background: white;
-    }
-    </style>
-</head>
-<body>
-  <h1>Demo Class & Inheritance JavaScript</h1>
-  <div class="output" id="output"></div>
-  <script>
     // Fungsi untuk menampilkan output di halaman
     function displayOutput(message) {
       const outputDiv = document.getElementById('output');
@@ -108,6 +79,3 @@
     const tesla = new ElectricCar('Tesla Model S', 2023, 4, 100);
     tesla.startEngine();
     tesla.charge();
-  </script>
-</body>
-</html>
