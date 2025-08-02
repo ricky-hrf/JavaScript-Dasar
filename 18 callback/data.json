@@ -1,0 +1,32 @@
+[
+  {
+    "id":1,
+    "name":"Ayam",
+    "Harga":35000,
+    "stok":12
+  },
+  {
+    "id":2,
+    "name":"Babi",
+    "Harga":45000,
+    "stok":15
+  },
+  {
+    "id":3,
+    "name":"Cap Chai",
+    "Harga":25000,
+    "stok":15
+  },
+  {
+    "id":4,
+    "name":"Durian",
+    "Harga":50000,
+    "stok":90
+  },
+  {
+    "id":5,
+    "name":"Enzim",
+    "Harga":35000,
+    "stok":12
+  }
+]
